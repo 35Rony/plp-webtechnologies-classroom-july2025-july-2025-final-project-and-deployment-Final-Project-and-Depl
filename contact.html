@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact - IT Consulting Firm</title>
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/script.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo"><a href="index.html">IT Consulting</a></div>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+  </div>
+</header>
+
+<main>
+  <section class="contact-hero">
+    <div class="container">
+      <h1>CONTACT US</h1>
+      <p>Get in touch with our experts today for consultation and support.</p>
+    </div>
+  </section>
+
+  <section class="contact-form container">
+    <form id="contactForm" action="#" method="POST" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Your email" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here"></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 IT Consulting Firm. All rights reserved.</p>
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  // Basic form validation
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', e => {
+    if(!form.checkValidity()) {
+      e.preventDefault();
+      alert('Please fill out all required fields correctly.');
+    }
+  });
+</script>
+
+</body>
+</html>
